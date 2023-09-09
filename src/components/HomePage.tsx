@@ -81,8 +81,8 @@ export const HomePage = () => {
               <pre>
                 <code>{htmlCode}</code>
               </pre>
-              If you're using Next.js, you can add the following code to your
-              root layout instead:
+              If you&apos;re using Next.js, you can add the following code to
+              your root layout instead:
               <pre>
                 <code>
                   export const metadata ={" "}
