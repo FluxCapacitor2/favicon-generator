@@ -6,4 +6,10 @@
   :root {
     color-scheme: dark;
   }
+  * {
+    border-color: theme(colors.neutral.600);
+  }
+  html {
+    background-color: theme(colors.neutral.800);
+  }
 }

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Favicon Generator",
@@ -23,7 +25,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <footer className="text-center my-8">
+          A project by{" "}
+          <Link className="font-medium underline" href="https://bswanson.dev">
+            <Image
+              src="https://bswanson.dev/favicon.svg"
+              unoptimized
+              width={16}
+              height={16}
+              alt=""
+              className="inline mr-1"
+            />
+            Brendan Swanson
+          </Link>{" "}
+          &mdash;{" "}
+          <Link
+            className="font-medium underline"
+            href="https://github.com/FluxCapacitor2/favicon-generator"
+          >
+            View Source on GitHub
+          </Link>
+        </footer>
+      </body>
     </html>
   );
 }
