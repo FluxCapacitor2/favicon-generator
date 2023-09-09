@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Outfit({ subsets: ["latin"] });
@@ -48,6 +49,10 @@ export default function RootLayout({
             View Source on GitHub
           </Link>
         </footer>
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "343c6fb2a45f424dac0de8affe3c0ece"}'
+        />
       </body>
     </html>
   );
