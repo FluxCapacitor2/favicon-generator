@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
 
   // If the input was an SVG, optimize it
   if (file.type === "image/svg+xml") {
-    const svg = optimize(await file.text());
+    const svg = optimize(await file.text(), { multipass: true });
     zip.file("icon.svg", svg.data);
   }
 

@@ -53,6 +53,15 @@ export const HomePage = () => {
       />
       {completed && (
         <section className="animate-slide-in">
+          {/* Show the generated favicon in the browser */}
+          <link rel="icon" href={data?.entries["favicon.ico"]} />
+          {data?.hasSVG && (
+            <link
+              rel="icon"
+              href={data?.entries["icon.svg"]}
+              type="image/svg+xml"
+            />
+          )}
           <h2>Instructions</h2>
           <ol>
             <li>
